@@ -92,7 +92,7 @@ def main():
 
     output_file = open(args.output, 'w')
     common_functions = ["ZwOpenProcess", "MmMapIoSpace", "ZwQuerySystemInformation", "KeStackAttachProcess",
-    "ZwTerminateProcess", "ZwMapViewOfSection"]
+    "ZwTerminateProcess", "ZwMapViewOfSection", "ZwOpenSection", "RtlCopyMemory"]
 
     blocked_hashes = get_blocked_hashes(args.xml)
     file_hashes = get_hashes_from_loldrivers(args.hashfile)

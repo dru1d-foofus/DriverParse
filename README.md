@@ -1,6 +1,18 @@
 # DriverParse
 
-Just a small python utility for parsing large amounts of drivers and saving them to a CSV file.
+Just a small python utility for parsing large amounts of drivers and saving them to a PSV file.
+
+It checks for several interesting imports:
+- KeStackAttachProcess
+- MmMapIoSpace
+- RtlCopyMemory
+- ZwMapViewOfSection
+- ZwOpenProcess
+- ZwOpenSection
+- ZwQuerySystemInformation
+- ZwTerminateProcess
+
+Next, the utility will check SHA256 hashes of the provided drivers and see if they're associated with any known blocklists. 
 
 ## Example
 
